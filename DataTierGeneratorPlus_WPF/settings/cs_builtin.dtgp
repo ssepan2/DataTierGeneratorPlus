@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Server>SSEPANDEV\SQLEXPRESS</Server>
+  <Database>homeSQL</Database>
+  <SQLLogin />
+  <Password />
+  <OutputPath />
+  <GrantUser />
+  <SPPrefix />
+  <GenerateDataLayerClassesCheckBox>true</GenerateDataLayerClassesCheckBox>
+  <Namespace>Cs_BuiltIn</Namespace>
+  <GenerateCustomClassTemplate>true</GenerateCustomClassTemplate>
+  <GenerateWcfLayerClasses>true</GenerateWcfLayerClasses>
+  <GenerateWcfLayerClientHelpers>true</GenerateWcfLayerClientHelpers>
+  <Size>
+    <Width>713</Width>
+    <Height>1072</Height>
+  </Size>
+  <Location>
+    <X>2164</X>
+    <Y>773</Y>
+  </Location>
+  <Version>6</Version>
+</Settings>

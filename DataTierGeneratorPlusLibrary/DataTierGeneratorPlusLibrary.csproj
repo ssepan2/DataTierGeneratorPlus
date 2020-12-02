@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DD6DD70E-8A7A-4480-83F8-6200755671AB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataTierGeneratorPlusLibrary</RootNamespace>
+    <AssemblyName>DataTierGeneratorPlusLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>images\DataTierGeneratorPlus.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Column.cs" />
+    <Compile Include="CsGeneratorBuiltIn.cs" />
+    <Compile Include="DbGenerator.cs" />
+    <Compile Include="DbGeneratorFactory.cs" />
+    <Compile Include="DbUtility.cs" />
+    <Compile Include="DbUtilityFactory.cs" />
+    <Compile Include="IDbGenerator.cs" />
+    <Compile Include="IDbUtility.cs" />
+    <Compile Include="IVsGenerator.cs" />
+    <Compile Include="MVC\GeneratorController.cs" />
+    <Compile Include="MVC\GeneratorModel.cs" />
+    <Compile Include="MVC\GeneratorSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SqlGenerator.cs" />
+    <Compile Include="SqlUtility.cs" />
+    <Compile Include="Table.cs" />
+    <Compile Include="Utility.cs" />
+    <Compile Include="VbGeneratorBuiltIn.cs" />
+    <Compile Include="VsGenerator.cs" />
+    <Compile Include="VsGeneratorFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\DataTierGeneratorPlus.ico" />
+    <Content Include="License-MSPL.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="License.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="readme.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="settings\sql\DATA_ALL.SQL" />
+    <Content Include="settings\sql\STOREDPROCEDURES_ALL.sql" />
+    <Content Include="settings\sql\TABLE_ALL.sql" />
+    <Content Include="sql\DATA_ALL.SQL" />
+    <Content Include="sql\STOREDPROCEDURES_ALL.sql" />
+    <Content Include="sql\TABLE_ALL.sql" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\WcfServiceSVC.txt" />
+    <EmbeddedResource Include="Templates\WcfServiceConfigSystemServiceModel.txt" />
+    <EmbeddedResource Include="Templates\WcfServiceConfigService.txt" />
+    <EmbeddedResource Include="Templates\WcfServiceConfigBehavior.txt" />
+    <EmbeddedResource Include="Templates\VbWcfServiceCustom.txt" />
+    <EmbeddedResource Include="Templates\VbWcfServiceClientApplication.txt" />
+    <EmbeddedResource Include="Templates\VbSortComparer.txt" />
+    <EmbeddedResource Include="Templates\VbNullHandler.txt" />
+    <EmbeddedResource Include="Templates\VbDataControllerCustom.txt" />
+    <EmbeddedResource Include="Templates\VbDatabaseUtility.txt" />
+    <EmbeddedResource Include="Templates\VbBindingListView.txt" />
+    <EmbeddedResource Include="Templates\SqlUserCreate.sql" />
+    <EmbeddedResource Include="Templates\SqlTableMetadata.sql" />
+    <EmbeddedResource Include="Templates\SqlColumnMetadata.sql" />
+    <EmbeddedResource Include="Templates\CsWcfServiceCustom.txt" />
+    <EmbeddedResource Include="Templates\CsWcfServiceClientApplication.txt" />
+    <EmbeddedResource Include="Templates\CsSortComparer.txt" />
+    <EmbeddedResource Include="Templates\CsNullHandler.txt" />
+    <EmbeddedResource Include="Templates\CsDataControllerCustom.txt" />
+    <EmbeddedResource Include="Templates\CsDatabaseUtility.txt" />
+    <EmbeddedResource Include="Templates\CsBindingListView.txt" />
+    <EmbeddedResource Include="settings\Templates\WcfServiceSVC.txt" />
+    <EmbeddedResource Include="settings\Templates\WcfServiceConfigSystemServiceModel.txt" />
+    <EmbeddedResource Include="settings\Templates\WcfServiceConfigService.txt" />
+    <EmbeddedResource Include="settings\Templates\WcfServiceConfigBehavior.txt" />
+    <EmbeddedResource Include="settings\Templates\VbWcfServiceCustom.txt" />
+    <EmbeddedResource Include="settings\Templates\VbWcfServiceClientApplication.txt" />
+    <EmbeddedResource Include="settings\Templates\VbSortComparer.txt" />
+    <EmbeddedResource Include="settings\Templates\VbNullHandler.txt" />
+    <EmbeddedResource Include="settings\Templates\VbDataControllerCustom.txt" />
+    <EmbeddedResource Include="settings\Templates\VbDatabaseUtility.txt" />
+    <EmbeddedResource Include="settings\Templates\VbBindingListView.txt" />
+    <EmbeddedResource Include="settings\Templates\SqlUserCreate.sql" />
+    <EmbeddedResource Include="settings\Templates\SqlTableMetadata.sql" />
+    <EmbeddedResource Include="settings\Templates\SqlColumnMetadata.sql" />
+    <EmbeddedResource Include="settings\Templates\CsWcfServiceCustom.txt" />
+    <EmbeddedResource Include="settings\Templates\CsWcfServiceClientApplication.txt" />
+    <EmbeddedResource Include="settings\Templates\CsSortComparer.txt" />
+    <EmbeddedResource Include="settings\Templates\CsNullHandler.txt" />
+    <EmbeddedResource Include="settings\Templates\CsDataControllerCustom.txt" />
+    <EmbeddedResource Include="settings\Templates\CsDatabaseUtility.txt" />
+    <EmbeddedResource Include="settings\Templates\CsBindingListView.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="settings\cs_builtin.dtgp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="settings\Cs_BuiltIn_WcfServiceApp.dtgp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="settings\SPsOnly.dtgp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="settings\vb_builtin.dtgp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="settings\Vb_BuiltIn_WcfServiceApp.dtgp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Ssepan.Application\Ssepan.Application.csproj">
+      <Project>{C69040CF-5ACD-4F55-8540-49FB7C2A7AA2}</Project>
+      <Name>Ssepan.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Ssepan.Io\Ssepan.Io.csproj">
+      <Project>{9EFE2EC6-F48E-4E4E-927F-068B54210E09}</Project>
+      <Name>Ssepan.Io</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Ssepan.Utility\Ssepan.Utility\Ssepan.Utility.csproj">
+      <Project>{9c11d8dd-e335-4fe3-aae6-5c3b17732890}</Project>
+      <Name>Ssepan.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

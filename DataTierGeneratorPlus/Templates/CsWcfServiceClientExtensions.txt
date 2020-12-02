@@ -1,0 +1,25 @@
+﻿using System.Collections.Generic;
+//using System.Runtime.CompilerServices;
+using #Namespace#.#Class#Service;
+
+#BeginNamespace#
+
+    static internal class #Class#ServiceClientExtensions
+    {
+
+        /// <summary>
+        /// Converts from Array of #Class#Info to List of #Class#Contract.
+        /// </summary>
+        static internal BindingListView<#Class#Contract> ToBindingListViewOfContract(this #Class#Contract[] infoList)
+        {
+            BindingListView<#Class#Contract> returnValue = new BindingListView<#Class#Contract>();
+            foreach (#Class#Contract info in infoList)
+            {
+                returnValue.Add(info);
+            }
+            return returnValue;
+        }
+    }
+    
+#EndNamespace#
+

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="#Language#" Debug="true" Service="#Namespace##Service#" CodeBehind="#Service#.Generated.svc.#Extension#" %>

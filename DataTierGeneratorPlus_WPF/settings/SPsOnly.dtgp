@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Server>SSEPANDEV\SQLEXPRESS</Server>
+  <Database>homeSQL</Database>
+  <SQLLogin />
+  <Password />
+  <OutputPath />
+  <GenerateStoredProcedures>true</GenerateStoredProcedures>
+  <GrantUser />
+  <SPPrefix />
+  <Namespace />
+  <ClassSuffix />
+  <Language>VB</Language>
+  <Size>
+    <Width>682</Width>
+    <Height>1227</Height>
+  </Size>
+  <Location>
+    <X>2195</X>
+    <Y>600</Y>
+  </Location>
+  <Version />
+</Settings>

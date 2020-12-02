@@ -1,0 +1,47 @@
+<Window x:Class="DataTierGeneratorPlus.GeneratorViewer"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="" Height="0" Width="18">
+	<Grid>
+		<Label Name="lblSqlAuthentication" Height="0" Width="0" FontSize="7.8" FontFamily="Microsoft Sans Serif" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" ></Label>
+		<Label Name="lblWindowsAuthentication" Height="0" Width="0" FontSize="7.8" FontFamily="Microsoft Sans Serif" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" ></Label>
+		<TextBox Name="passwordTextBox" Height="0" Width="0" TextChanged="passwordTextBox_TextChanged" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" TextWrapping="Wrap" ></TextBox>
+		<TextBox Name="loginNameTextBox" Height="0" Width="0" TextChanged="LoginNameTextBox_TextChanged" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" TextWrapping="Wrap" ></TextBox>
+		<Label Name="passwordLabel" Height="0" Width="0" FontSize="7.8" FontFamily="Microsoft Sans Serif" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" ></Label>
+		<Label Name="loginNameLabel" Height="0" Width="0" FontSize="7.8" FontFamily="Microsoft Sans Serif" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" ></Label>
+		<CheckBox Name="sqlServerAuthenticationRadioButton" Height="0" Width="0" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Checked="SqlServerAuthenticationRadioButton_CheckedChanged" ></CheckBox>
+		<TextBox Name="storedProcedurePrefixTextBox" Height="0" Width="0" TextChanged="storedProcedurePrefixTextBox_TextChanged" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" TextWrapping="Wrap" ></TextBox>
+		<Label Name="storedProcedurePrefixLabel" Height="0" Width="0" FontSize="7.8" FontFamily="Microsoft Sans Serif" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" ></Label>
+		<TextBox Name="grantUserTextBox" Height="0" Width="0" TextChanged="grantUserTextBox_TextChanged" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" TextWrapping="Wrap" ></TextBox>
+		<Label Name="grantUserLabel" Height="0" Width="0" FontSize="7.8" FontFamily="Microsoft Sans Serif" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" ></Label>
+		<CheckBox Name="multipleFilesCheckBox" Height="0" Width="0" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Checked="multipleFilesCheckBox_CheckedChanged" ></CheckBox>
+		<Label Name="label4" Height="0" Width="0" FontSize="7.8" FontFamily="Microsoft Sans Serif" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" ></Label>
+		<ComboBox Name="ddlLanguage" Height="0" Width="0" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" SelectionChanged="ddlLanguage_SelectedIndexChanged" />
+		<Label Name="label3" Height="0" Width="0" FontSize="7.8" FontFamily="Microsoft Sans Serif" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" ></Label>
+		<ComboBox Name="ddlSqlHelper" Height="0" Width="0" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" SelectionChanged="ddlSqlHelper_SelectedIndexChanged" />
+		<CheckBox Name="GenerateCustomClassTemplateCheckBox" Height="0" Width="0" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Checked="GenerateCustomClassTemplateCheckBox_CheckedChanged" ></CheckBox>
+		<TextBox Name="txtClassSuffix" Height="0" Width="0" TextChanged="txtClassSuffix_TextChanged" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" TextWrapping="Wrap" ></TextBox>
+		<Label Name="lblClassSuffix" Height="0" Width="0" FontSize="7.8" FontFamily="Microsoft Sans Serif" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" ></Label>
+		<TextBox Name="namespaceTextBox" Height="0" Width="0" TextChanged="namespaceTextBox_TextChanged" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" TextWrapping="Wrap" ></TextBox>
+		<Label Name="namespaceLabel" Height="0" Width="0" FontSize="7.8" FontFamily="Microsoft Sans Serif" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" ></Label>
+		<CheckBox Name="chkAutoSelectOnLoad" Height="0" Width="0" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Checked="chkAutoSelectOnLoad_CheckedChanged" ></CheckBox>
+		<CheckBox Name="chkFetchTableDetailsWithLoad" Height="0" Width="0" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Checked="chkFetchTableDetailsWithLoad_CheckedChanged" ></CheckBox>
+		<TextBox Name="databaseTextBox" Height="0" Width="0" TextChanged="DatabaseTextBox_TextChanged" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" TextWrapping="Wrap" ></TextBox>
+		<TextBox Name="serverTextBox" Height="0" Width="0" TextChanged="ServerTextBox_TextChanged" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" TextWrapping="Wrap" ></TextBox>
+		<Label Name="databaseLabel" Height="0" Width="0" FontSize="7.8" FontFamily="Microsoft Sans Serif" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" ></Label>
+		<Label Name="label2" Height="0" Width="0" FontSize="7.8" FontFamily="Microsoft Sans Serif" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" ></Label>
+		<Label Name="serverLabel" Height="0" Width="0" FontSize="7.8" FontFamily="Microsoft Sans Serif" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" ></Label>
+		<ComboBox Name="ddlDBMS" Height="0" Width="0" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" SelectionChanged="ddlDBMS_SelectedIndexChanged" />
+		<Button Name="OutputPathFolderSelectButton" Height="0" Width="0" Click="OutputPathFolderSelectButton_Click" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" ></Button>
+		<TextBox Name="OutputPathTextBox" Height="0" Width="0" TextChanged="OutputPathTextBox_TextChanged" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" TextWrapping="Wrap" ></TextBox>
+		<Label Name="label1" Height="0" Width="0" FontSize="7.8" FontFamily="Microsoft Sans Serif" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" ></Label>
+		<CheckBox Name="GenerateDataLayerClassesCheckBox" Height="0" Width="0" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Checked="GenerateDataLayerClassesCheckBox_CheckedChanged" ></CheckBox>
+		<CheckBox Name="GenerateStoredProceduresCheckBox" Height="0" Width="0" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Checked="GenerateStoredProceduresCheckBox_CheckedChanged" ></CheckBox>
+		<CheckBox Name="GenerateWcfLayerServerComponentsCheckBox" Height="0" Width="0" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Checked="GenerateWcfLayerServerComponentsCheckBox_CheckedChanged" ></CheckBox>
+		<CheckBox Name="GenerateWcfLayerClientHelpersCheckBox" Height="0" Width="0" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Checked="GenerateWcfLayerClientHelpersCheckBox_CheckedChanged" ></CheckBox>
+		<CheckBox Name="GenerateWcfLayerClassesCheckBox" Height="0" Width="0" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Checked="GenerateWcfLayerClassesCheckBox_CheckedChanged" ></CheckBox>
+		<Grid Name="dataGridView1" Height="0" Width="0" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+		<Button Name="loadButton" Height="0" Width="0" Click="LoadButton_Click" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" ></Button>
+		<Button Name="generateButton" Height="0" Width="0" Click="GenerateButton_Click" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" ></Button>
+	</Grid>
+</Window>

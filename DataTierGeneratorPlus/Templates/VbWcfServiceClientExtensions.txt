@@ -1,0 +1,23 @@
+﻿Imports System.Collections.Generic
+Imports System.Runtime.CompilerServices
+Imports #Namespace#.#Class#Service
+
+'#BeginNamespace#
+
+    Friend Module #Class#ServiceClientExtensions
+
+        ''' <summary>
+        ''' Converts from Array of #Class#Info to List of #Class#Contract.
+        ''' </summary>
+        <Extension()> _
+        Friend Function ToBindingListViewOfContract(ByVal infoList As #Class#Contract()) As BindingListView(Of #Class#Contract)
+            Dim returnValue As New BindingListView(Of #Class#Contract)
+            For Each info As #Class#Contract In infoList
+                returnValue.Add(info)
+            Next
+            Return returnValue
+        End Function
+    End Module
+
+'#EndNamespace#
+

@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{133398E8-37F1-4D54-AB03-061E8A3AC087}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>images\dbs.ico</ApplicationIcon>
+    <AssemblyKeyContainerName />
+    <AssemblyName>DataTierGeneratorPlus</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DataTierGeneratorPlus</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>DataTierGeneratorPlus.App</StartupObject>
+    <FileUpgradeFlags />
+    <UpgradeBackupLocation />
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE;debug</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="GeneratorViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="GeneratorViewer.xaml.cs">
+      <DependentUpon>GeneratorViewer.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="obj\app.config" />
+    <Content Include="settings\SPsOnly.dtgp" />
+    <Content Include="sql\DATA_ALL.SQL" />
+    <Content Include="sql\STOREDPROCEDURES_ALL.sql" />
+    <Content Include="sql\TABLE_ALL.sql" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\VbNullHandler.txt" />
+    <EmbeddedResource Include="Templates\CsNullHandler.txt" />
+    <EmbeddedResource Include="Templates\CsSortComparer.txt" />
+    <EmbeddedResource Include="Templates\CsBindingListView.txt" />
+    <EmbeddedResource Include="Templates\VbWcfServiceCustom.txt" />
+    <EmbeddedResource Include="Templates\WcfServiceSVC.txt" />
+    <Content Include="License-MSPL.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\152_4_x16.ico" />
+    <Content Include="images\Data_Schema.ico" />
+    <Content Include="images\Data_Schema1616.ico" />
+    <Content Include="images\dbs.ico" />
+    <Content Include="images\documents_16.ico" />
+    <Content Include="images\folder_open_16.ico" />
+    <Content Include="images\SAVE_16.ICO" />
+    <Content Include="images\status_anim.gif" />
+    <Content Include="images\W95MBX04.ICO" />
+    <Content Include="License.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="readme.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="settings\cs_builtin.dtgp" />
+    <Content Include="settings\Cs_BuiltIn_WcfServiceApp.dtgp" />
+    <Content Include="settings\vb_builtin.dtgp" />
+    <Content Include="settings\Vb_BuiltIn_WcfServiceApp.dtgp" />
+    <EmbeddedResource Include="Templates\VbWcfServiceClientApplication.txt" />
+    <EmbeddedResource Include="Templates\CsWcfServiceClientApplication.txt" />
+    <EmbeddedResource Include="Templates\WcfServiceConfigService.txt" />
+    <EmbeddedResource Include="Templates\WcfServiceConfigBehavior.txt" />
+    <EmbeddedResource Include="Templates\WcfServiceConfigSystemServiceModel.txt" />
+    <EmbeddedResource Include="Templates\VbDataControllerCustom.txt" />
+    <EmbeddedResource Include="Templates\CsDataControllerCustom.txt" />
+    <EmbeddedResource Include="Templates\VbBindingListView.txt" />
+    <EmbeddedResource Include="Templates\VbSortComparer.txt" />
+    <Compile Include="GeneratorController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Column.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CsGeneratorBuiltIn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbGeneratorFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbUtility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbUtilityFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GeneratorModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IDbGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IDbUtility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IVsGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SettingsController.cs" />
+    <Compile Include="SqlGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlUtility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Table.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Templates\CsWcfServiceCustom.txt" />
+    <Compile Include="Utility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VbGeneratorBuiltIn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VsGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VsGeneratorFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Templates\CsDatabaseUtility.txt" />
+    <EmbeddedResource Include="Templates\SqlColumnMetadata.sql" />
+    <EmbeddedResource Include="Templates\SqlTableMetadata.sql" />
+    <EmbeddedResource Include="Templates\SqlUserCreate.sql" />
+    <EmbeddedResource Include="Templates\VbDatabaseUtility.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Ssepan.Application\Ssepan.Application.csproj">
+      <Project>{C69040CF-5ACD-4F55-8540-49FB7C2A7AA2}</Project>
+      <Name>Ssepan.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Ssepan.DataBinding\Ssepan.DataBinding.csproj">
+      <Project>{3E3137B5-D920-489C-AFA1-84E9D91F8D48}</Project>
+      <Name>Ssepan.DataBinding</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Ssepan.Io\Ssepan.Io.csproj">
+      <Project>{9EFE2EC6-F48E-4E4E-927F-068B54210E09}</Project>
+      <Name>Ssepan.Io</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Ssepan.Patterns\Ssepan.Patterns.csproj">
+      <Project>{02B288FD-2642-4A7F-96E0-54031FA137F8}</Project>
+      <Name>Ssepan.Patterns</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Ssepan.Utility\Ssepan.Utility.csproj">
+      <Project>{9C11D8DD-E335-4FE3-AAE6-5C3B17732890}</Project>
+      <Name>Ssepan.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

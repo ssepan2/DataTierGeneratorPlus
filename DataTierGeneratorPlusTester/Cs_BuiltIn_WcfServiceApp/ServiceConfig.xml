@@ -1,0 +1,54 @@
+	<system.serviceModel>
+		<services>
+			<service name="Cs_BuiltIn_WcfServiceApp.Test_masterService" behaviorConfiguration="Cs_BuiltIn_WcfServiceApp.Test_masterServiceBehavior">
+				<!-- Service Endpoints -->
+				<endpoint address="" binding="wsHttpBinding" contract="Cs_BuiltIn_WcfServiceApp.ITest_masterService">
+					<!-- 
+					Upon deployment, the following identity element should be removed or replaced to reflect the 
+					identity under which the deployed service runs.  If removed, WCF will infer an appropriate identity 
+					automatically.
+					-->
+					<identity>
+						<dns value="localhost"/>
+					</identity>
+				</endpoint>
+				<endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange"/>
+			</service>
+			<service name="Cs_BuiltIn_WcfServiceApp.Test_detailService" behaviorConfiguration="Cs_BuiltIn_WcfServiceApp.Test_detailServiceBehavior">
+				<!-- Service Endpoints -->
+				<endpoint address="" binding="wsHttpBinding" contract="Cs_BuiltIn_WcfServiceApp.ITest_detailService">
+					<!-- 
+					Upon deployment, the following identity element should be removed or replaced to reflect the 
+					identity under which the deployed service runs.  If removed, WCF will infer an appropriate identity 
+					automatically.
+					-->
+					<identity>
+						<dns value="localhost"/>
+					</identity>
+				</endpoint>
+				<endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange"/>
+			</service>
+
+
+
+		</services>
+		<behaviors>
+			<serviceBehaviors>
+				<behavior name="Cs_BuiltIn_WcfServiceApp.Test_masterServiceBehavior">
+					<!-- To avoid disclosing metadata information, set the value below to false and remove the metadata endpoint above before deployment -->
+					<serviceMetadata httpGetEnabled="true"/>
+					<!-- To receive exception details in faults for debugging purposes, set the value below to true.  Set to false before deployment to avoid disclosing exception information -->
+					<serviceDebug includeExceptionDetailInFaults="false"/>
+				</behavior>
+				<behavior name="Cs_BuiltIn_WcfServiceApp.Test_detailServiceBehavior">
+					<!-- To avoid disclosing metadata information, set the value below to false and remove the metadata endpoint above before deployment -->
+					<serviceMetadata httpGetEnabled="true"/>
+					<!-- To receive exception details in faults for debugging purposes, set the value below to true.  Set to false before deployment to avoid disclosing exception information -->
+					<serviceDebug includeExceptionDetailInFaults="false"/>
+				</behavior>
+
+
+
+			</serviceBehaviors>
+		</behaviors>
+	</system.serviceModel>

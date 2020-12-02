@@ -1,0 +1,10 @@
+﻿	<system.serviceModel>
+		<services>
+#ServiceTag#
+		</services>
+		<behaviors>
+			<serviceBehaviors>
+#BehaviorTag#
+			</serviceBehaviors>
+		</behaviors>
+	</system.serviceModel>

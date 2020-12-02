@@ -1,0 +1,8 @@
+
+#BeginNamespace#
+
+    public partial class #Class# 
+    {
+	}
+	
+#EndNamespace#

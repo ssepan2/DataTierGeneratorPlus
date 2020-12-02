@@ -1,0 +1,15 @@
+﻿			<service name="#Namespace##Service#" behaviorConfiguration="#Namespace##Service#Behavior">
+				<!-- Service Endpoints -->
+				<endpoint address="" binding="wsHttpBinding" contract="#Namespace##Interface#">
+					<!-- 
+					Upon deployment, the following identity element should be removed or replaced to reflect the 
+					identity under which the deployed service runs.  If removed, WCF will infer an appropriate identity 
+					automatically.
+					-->
+					<identity>
+						<dns value="localhost"/>
+					</identity>
+				</endpoint>
+				<endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange"/>
+			</service>
+#ServiceTag#

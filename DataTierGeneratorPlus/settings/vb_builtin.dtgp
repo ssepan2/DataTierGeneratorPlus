@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Server>SSEPANDEV\SQLEXPRESS2K8</Server>
+  <Database>Home</Database>
+  <SQLLogin />
+  <Password />
+  <OutputPath />
+  <GrantUser />
+  <SPPrefix />
+  <GenerateDataLayerClassesCheckBox>true</GenerateDataLayerClassesCheckBox>
+  <Namespace>VB_BuiltIn</Namespace>
+  <ClassSuffix />
+  <Language>VB</Language>
+  <GenerateCustomClassTemplate>true</GenerateCustomClassTemplate>
+  <GenerateWcfLayerClasses>true</GenerateWcfLayerClasses>
+  <GenerateWcfLayerClientHelpers>true</GenerateWcfLayerClientHelpers>
+  <Size>
+    <Width>690</Width>
+    <Height>878</Height>
+  </Size>
+  <Location>
+    <X>205</X>
+    <Y>74</Y>
+  </Location>
+  <Version />
+</Settings>
