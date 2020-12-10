@@ -12,7 +12,6 @@ using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
 using Ssepan.Application;
-using Ssepan.Application.WinForms;
 using Ssepan.Utility;
 
 namespace DataTierGeneratorPlusLibrary

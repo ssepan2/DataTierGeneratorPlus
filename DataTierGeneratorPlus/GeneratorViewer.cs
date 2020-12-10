@@ -13,7 +13,6 @@ using System.Reflection;
 using System.Windows.Forms;
 using DataTierGeneratorPlusLibrary;
 using Ssepan.Application;
-using Ssepan.Application.WinForms;
 using Ssepan.DataBinding;
 using Ssepan.Io;
 using Ssepan.Utility;

@@ -1,8 +1,0 @@
-﻿
-'#BeginNamespace#
-
-	Partial Public Class #Class#
-	End Class
-
-'#EndNamespace#
-

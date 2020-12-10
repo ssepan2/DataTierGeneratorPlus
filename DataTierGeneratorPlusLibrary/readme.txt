@@ -57,6 +57,11 @@ There are several sample projects per language, where LL is the language:
 
 HISTORY:
 
+6.16:
+~Updated Ssepan.* to 2.7
+~update to Framework 4.8
+~convert to SDK style project
+
 6.15: 
 ~Refactored to use new MVVM / MVC hybrid.
 ~Updated Ssepan.* to 2.6

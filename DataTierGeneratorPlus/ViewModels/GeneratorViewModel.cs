@@ -10,8 +10,6 @@ using System.Text;
 using System.Windows.Forms;
 using DataTierGeneratorPlusLibrary;
 using Ssepan.Application;
-using Ssepan.Application.WinForms;
-//using Ssepan.Collections;
 using Ssepan.Io;
 using Ssepan.Utility;
 

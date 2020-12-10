@@ -5,7 +5,6 @@ using System.Reflection;
 using System.Windows.Forms;
 using DataTierGeneratorPlusLibrary;
 using Ssepan.Application;
-using Ssepan.Application.WinConsole;
 using Ssepan.Utility;
 
 namespace DataTierGeneratorPlus
