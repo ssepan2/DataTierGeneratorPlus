@@ -4,17 +4,7 @@
     <TargetFramework>net48</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <StartupObject>DataTierGeneratorPlus.Program</StartupObject>
-    <ApplicationIcon>images\DataTierGeneratorPlus.ico</ApplicationIcon>
   </PropertyGroup>
-  <ItemGroup>
-    <None Remove="License.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="License.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Ssepan.Application\Ssepan.Application.csproj">
     </ProjectReference>

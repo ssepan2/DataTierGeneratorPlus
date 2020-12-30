@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*" Name="DataTierGeneratorPlus" Language="1033" Version="6.16.0.0" Manufacturer="Stephen J Sepan" UpgradeCode="f68fbeba-57d6-4f36-a423-77be506c37e2">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate />
+
+		<Feature Id="ProductFeature" Title="DataTierGeneratorPlus" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+      <ComponentRef Id="ApplicationShortcut" />
+    </Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="DataTierGeneratorPlus" />
+			</Directory>
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ApplicationProgramsFolder" Name="DataTierGeneratorPlus"/>
+      </Directory>
+    </Directory>
+	</Fragment>
+
+  <Fragment>
+      <DirectoryRef Id="ApplicationProgramsFolder">
+      <Component Id="ApplicationShortcut" Guid="6d17cb73-2d7f-4b43-bd27-575dbda3f46f">
+        <Shortcut Id="ApplicationStartMenuShortcut"
+                  Name="DataTierGeneratorPlus"
+                  Description="DataTierGeneratorPlus"
+                  Target="[#DataTierGeneratorPlus.exe]"
+                  WorkingDirectory="INSTALLFOLDER"/>
+        <RemoveFolder Id="CleanUpShortCut" Directory="ApplicationProgramsFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\StephenJSepan\DataTierGeneratorPlus" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+
+  <Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			 <Component Id="DataTierGeneratorPlus.exe"> 
+				<File Source="$(var.DataTierGeneratorPlus.TargetPath)" />
+			 </Component>
+      <Component Id="DataTierGeneratorPlus.exe.config">
+        <File Source="$(var.DataTierGeneratorPlus.TargetDir)\$(var.DataTierGeneratorPlus.TargetFileName).config" />
+      </Component>
+      <Component Id="DataTierGeneratorPlus.pdb">
+        <File Source="$(var.DataTierGeneratorPlus.TargetDir)\$(var.DataTierGeneratorPlus.TargetName).pdb" />
+      </Component>
+      <Component Id="License.txt">
+        <File Source="$(var.DataTierGeneratorPlus.ProjectDir)\License.txt" />
+      </Component>
+      <Component Id="DataTierGeneratorPlusLibrary.dll">
+        <File Source="$(var.DataTierGeneratorPlusLibrary.TargetPath)" />
+      </Component>
+      <Component Id="DataTierGeneratorPlusLibrary.pdb">
+        <File Source="$(var.DataTierGeneratorPlusLibrary.TargetDir)\$(var.DataTierGeneratorPlusLibrary.TargetName).pdb" />
+      </Component>
+      <Component Id="readme.txt">
+        <File Source="$(var.DataTierGeneratorPlusLibrary.ProjectDir)\readme.txt" />
+      </Component>
+      <Component Id="Ssepan.Application.dll">
+        <File Source="$(var.Ssepan.Application.TargetPath)" />
+      </Component>
+      <Component Id="Ssepan.Application.pdb">
+        <File Source="$(var.Ssepan.Application.TargetDir)\$(var.Ssepan.Application.TargetName).pdb" />
+      </Component>
+      <Component Id="Ssepan.DataBinding.dll">
+        <File Source="$(var.Ssepan.DataBinding.TargetPath)" />
+      </Component>
+      <Component Id="Ssepan.DataBinding.pdb">
+        <File Source="$(var.Ssepan.DataBinding.TargetDir)\$(var.Ssepan.DataBinding.TargetName).pdb" />
+      </Component>
+      <Component Id="Ssepan.Io.dll">
+        <File Source="$(var.Ssepan.Io.TargetPath)" />
+      </Component>
+      <Component Id="Ssepan.Io.pdb">
+        <File Source="$(var.Ssepan.Io.TargetDir)\$(var.Ssepan.Io.TargetName).pdb" />
+      </Component>
+      <Component Id="Ssepan.Utility.dll">
+        <File Source="$(var.Ssepan.Utility.TargetPath)" />
+      </Component>
+      <Component Id="Ssepan.Utility.pdb">
+        <File Source="$(var.Ssepan.Utility.TargetDir)\$(var.Ssepan.Utility.TargetName).pdb" />
+      </Component>
+    </ComponentGroup>
+	</Fragment>
+</Wix>
