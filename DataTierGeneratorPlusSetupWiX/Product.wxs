@@ -25,7 +25,7 @@
 
   <Fragment>
       <DirectoryRef Id="ApplicationProgramsFolder">
-      <Component Id="ApplicationShortcut" Guid="6d17cb73-2d7f-4b43-bd27-575dbda3f46f">
+      <Component Id="ApplicationShortcut" Guid="8c680c57-38ba-4d73-80e8-c79773cf1900">
         <Shortcut Id="ApplicationStartMenuShortcut"
                   Name="DataTierGeneratorPlus"
                   Description="DataTierGeneratorPlus"
