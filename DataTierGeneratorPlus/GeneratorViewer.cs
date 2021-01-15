@@ -60,7 +60,7 @@ namespace DataTierGeneratorPlus
                 //ConsoleApplication.defaultOutputDelegate = ConsoleApplication.messageBoxWrapperOutputDelegate;
 
                 //subscribe to notifications
-                this.PropertyChanged += ModelPropertyChangedEventHandlerDelegate;
+                this.PropertyChanged += PropertyChangedEventHandlerDelegate;
 
                 InitViewModel();
 
@@ -96,16 +96,23 @@ namespace DataTierGeneratorPlus
 
         #region PropertyChangedEventHandlerDelegate
         /// <summary>
-        /// Note: property changes update UI manually.
+        /// Note: model property changes update UI manually.
+        /// Note: handle settings property changes manually.
+        /// Note: because settings properties are a subset of the model 
+        ///  (every settings property should be in the model, 
+        ///  but not every model property is persisted to settings)
+        ///  it is decided that for now the settigns handler will 
+        ///  invoke the model handler as well.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected void ModelPropertyChangedEventHandlerDelegate
+        protected void PropertyChangedEventHandlerDelegate
         (
             Object sender,
             PropertyChangedEventArgs e
         )
         {
+            #region Model
             try
             {
                 if (e.PropertyName == "IsChanged")
@@ -308,31 +315,15 @@ namespace DataTierGeneratorPlus
                 {
                     ValidateButtons();
                 }
-            }
-            catch (Exception ex)
-            {
-                Log.Write(ex, MethodBase.GetCurrentMethod(), EventLogEntryType.Error);
-            }
-        }
+            #endregion Model
 
-        /// <summary>
-        /// Note: handle settings property changes manually.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        protected void SettingsPropertyChangedEventHandlerDelegate
-        (
-            Object sender,
-            PropertyChangedEventArgs e
-        )
-        {
-            try
-            {
+            #region Settings
                 if (e.PropertyName == "Dirty")
                 {
                     //apply settings that don't have databindings
                     ViewModel.DirtyIconIsVisible = (SettingsController<GeneratorSettings>.Settings.Dirty);
                 }
+            #endregion Settings
             }
             catch (Exception ex)
             {
@@ -902,10 +893,13 @@ namespace DataTierGeneratorPlus
         {
             try
             {
-                //subscribe view to model notifications
-                ModelController<GeneratorModel>.Model.PropertyChanged += ModelPropertyChangedEventHandlerDelegate;
-                //subscribe view to settings notifications
-                SettingsController<GeneratorSettings>.DefaultHandler = SettingsPropertyChangedEventHandlerDelegate;
+                //tell controller how model should notify view about non-persisted properties AND including model properties that may be part of settings
+                ModelController<GeneratorModel>.DefaultHandler = PropertyChangedEventHandlerDelegate;
+
+                //tell controller how settings should notify view about persisted properties
+                SettingsController<GeneratorSettings>.DefaultHandler = PropertyChangedEventHandlerDelegate;
+
+                InitModelAndSettings();
 
                 FileDialogInfo settingsFileDialogInfo =
                     new FileDialogInfo
@@ -955,7 +949,7 @@ namespace DataTierGeneratorPlus
                     ViewName,
                     new GeneratorViewModel
                     (
-                        this.ModelPropertyChangedEventHandlerDelegate,
+                        this.PropertyChangedEventHandlerDelegate,
                         new Dictionary<String, Bitmap>() 
                         { 
                             { "New", Properties.Resources.New }, 
@@ -1013,6 +1007,20 @@ namespace DataTierGeneratorPlus
             }
         }
 
+        protected void InitModelAndSettings()
+        {
+            //create Settings before first use by Model
+            if (SettingsController<GeneratorSettings>.Settings == null)
+            {
+                SettingsController<GeneratorSettings>.New();
+            }
+            //Model properties rely on Settings, so don't call Refresh before this is run.
+            if (ModelController<GeneratorModel>.Model == null)
+            {
+                ModelController<GeneratorModel>.New();
+            }
+        }
+
         protected void DisposeSettings()
         {
             //save user and application model 
@@ -1043,7 +1051,7 @@ namespace DataTierGeneratorPlus
             }
 
             //unsubscribe from model notifications
-            ModelController<GeneratorModel>.Model.PropertyChanged -= ModelPropertyChangedEventHandlerDelegate;
+            ModelController<GeneratorModel>.Model.PropertyChanged -= PropertyChangedEventHandlerDelegate;
         }
 
         protected void _Run()
