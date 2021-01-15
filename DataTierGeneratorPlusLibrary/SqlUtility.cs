@@ -11,7 +11,8 @@ using Ssepan.Utility;
 
 namespace DataTierGeneratorPlusLibrary
 {
-	internal sealed class SqlUtility  : DbUtility
+	internal sealed class SqlUtility  : 
+        DbUtility
 	{
 		private const String SP_PARAMETER_PREFIX = "@"; //in Oracle, this would be a : (colon)
 		private const String CODE_EXTENSION = "sql";//in Oracle, this might be "ora"; in Access it might be "qry"

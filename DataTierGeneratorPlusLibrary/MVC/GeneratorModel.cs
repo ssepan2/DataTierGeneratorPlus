@@ -143,7 +143,7 @@ namespace DataTierGeneratorPlusLibrary
         /// </summary>
         /// <param name="anotherSettings"></param>
         /// <returns></returns>
-        public override Boolean Equals(IModel other)
+        public override Boolean Equals(IModelComponent other)
         {
             Boolean returnValue = default(Boolean);
             GeneratorModel otherModel = default(GeneratorModel);
