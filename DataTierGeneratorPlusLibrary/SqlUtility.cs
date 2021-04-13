@@ -8,6 +8,7 @@ using System.IO;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using Ssepan.Utility;
+using DataTierGeneratorPlusLibrary.MVC;
 
 namespace DataTierGeneratorPlusLibrary
 {

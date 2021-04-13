@@ -3,6 +3,7 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using DataTierGeneratorPlus;
 using Ssepan.Application;
+using Ssepan.Application.WinForms;
 
 //
 // General Information about an assembly is controlled through the following 

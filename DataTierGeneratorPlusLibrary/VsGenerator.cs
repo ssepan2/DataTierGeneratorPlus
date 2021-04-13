@@ -5,6 +5,7 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 using Ssepan.Utility;
+using DataTierGeneratorPlusLibrary.MVC;
 
 namespace DataTierGeneratorPlusLibrary 
 {

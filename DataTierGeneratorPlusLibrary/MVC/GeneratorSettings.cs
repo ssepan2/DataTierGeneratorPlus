@@ -10,7 +10,7 @@ using System.Xml.Serialization;
 using Ssepan.Application;
 using Ssepan.Utility;
 
-namespace DataTierGeneratorPlusLibrary
+namespace DataTierGeneratorPlusLibrary.MVC
 {
     /// <summary>
     /// persisted model; run-time model depends on this

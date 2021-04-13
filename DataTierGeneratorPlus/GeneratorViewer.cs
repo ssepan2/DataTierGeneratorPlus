@@ -1,18 +1,17 @@
 //#define USE_CONFIG_FILEPATH
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Configuration;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 using DataTierGeneratorPlusLibrary;
+using DataTierGeneratorPlusLibrary.MVC;
 using Ssepan.Application;
+using Ssepan.Application.MVC;
 using Ssepan.DataBinding;
 using Ssepan.Io;
 using Ssepan.Utility;

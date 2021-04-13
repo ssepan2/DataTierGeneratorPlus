@@ -12,9 +12,10 @@ using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
 using Ssepan.Application;
+using Ssepan.Application.MVC;
 using Ssepan.Utility;
 
-namespace DataTierGeneratorPlusLibrary
+namespace DataTierGeneratorPlusLibrary.MVC
 {
     public class GeneratorController<TModel> :
         ModelController<TModel>

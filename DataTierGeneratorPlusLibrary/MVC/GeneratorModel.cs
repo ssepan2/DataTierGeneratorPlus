@@ -8,9 +8,10 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 using Ssepan.Application;
+using Ssepan.Application.MVC;
 using Ssepan.Utility;
 
-namespace DataTierGeneratorPlusLibrary 
+namespace DataTierGeneratorPlusLibrary.MVC 
 {
     /// <summary>
     /// run-time model; relies on model

@@ -9,7 +9,9 @@ using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
 using DataTierGeneratorPlusLibrary;
+using DataTierGeneratorPlusLibrary.MVC;
 using Ssepan.Application;
+using Ssepan.Application.WinForms;
 using Ssepan.Io;
 using Ssepan.Utility;
 
